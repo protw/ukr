@@ -259,7 +259,7 @@ Error message and password prompt
 <div _canonical_uri="./images/%2524%253A%252Fboa%252Fimg%252Fukrlang-logo.svg" created="20180826204458857" modified="20180826204528833" title="$:/boa/img/ukrlang-logo.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20190817213614360" modified="20190817214125546" tags="Мова" title="$:/boa/logo" type="image/svg+xml" wiki-address="https://protw.github.io/ukr" wiki-caption="Українська мова у сучасному інформаційному просторі" wiki-created="20180826230830000" wiki-modified="20190818004123000" wiki-name="UKRLANG" wiki-order="155" revision="0" bag="default">
+<div created="20190817213614360" modified="20190818105243136" tags="Мова" title="$:/boa/logo" type="image/svg+xml" wiki-address="https://protw.github.io/ukr" wiki-caption="Українська мова у сучасному інформаційному просторі" wiki-created="20180826230830000" wiki-github="https://github.com/protw/ukr" wiki-modified="20190818004123000" wiki-name="UKRLANG" wiki-order="155" revision="0" bag="default">
 <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
 &lt;svg
    xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
@@ -350,7 +350,7 @@ Error message and password prompt
 &lt;/svg&gt;
 </pre>
 </div>
-<div created="20190716071226253" modified="20190817213957362" tags="" title="$:/boa/logo-edit" revision="0" bag="default">
+<div created="20190716071226253" modified="20190818101211303" tags="" title="$:/boa/logo-edit" revision="0" bag="default">
 <pre>\define edit-logo-field(tid,lbl,fld,descr)
 &lt;div class=&quot;boa-edit-width&quot;&gt;
 &lt;div class=&quot;boa-label&quot;&gt;$lbl$&lt;/div&gt;
@@ -374,7 +374,7 @@ Error message and password prompt
   .boa-table-comment { color: lightgrey; font-size: 95%; line-height: 100%; padding: 5px 5px 10px; width: 350px; }
 &lt;/style&gt;
 
-!! Редагування загальних параметрів вікі
+!! Загальні параметри вікі
 
 &lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
@@ -404,37 +404,44 @@ Error message and password prompt
   descr:&quot;За цим параметром сортується список вікі&quot;
 &gt;&gt;
 
-!! Перегляд інших загальних параметрів вікі
+!! Розташування вікі
 
 &lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
   lbl:&quot;Веб-адреса вікі&quot; 
   fld:&quot;wiki-address&quot; 
-  descr:&quot;Повна веб-адреса вікі визначена у параметрах `wiki_domain` і `wiki_name` конфігураційного файлу `tw_build_conf.json`&quot;
+  descr:&quot;Повна веб-адреса опублікованої вікі визначена у параметрах `wiki_domain` і `wiki_name` з конфігураційного файлу `tw_build_conf.json`&quot;
+&gt;&gt;
+
+&lt;&lt;edit-logo-field
+  tid:&quot;$:/boa/logo&quot; 
+  lbl:&quot;//Github// репо вікі&quot; 
+  fld:&quot;wiki-github&quot; 
+  descr:&quot;Повна веб-адреса Github репозитарію (багатофайловий вихідний текст вікі у форматі Node.js) складається з двох частин `github_main` і `wiki_name` з конфігураційного файлу `tw_build_conf.json`&quot;
 &gt;&gt;
 
 &lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
   lbl:&quot;Дата створення вікі&quot; 
   fld:&quot;wiki-created&quot; 
-  descr:&quot;Формат дати: yyyymmddHHMMSSFFF, де //yyyy// - рік, //mm// - місяць, //dd// - день місяця, //HH// - годин, //MM// - хвилин, //SS// - секунд, //FFF// - мікросекунд&quot;
+  descr:&quot;Формат дати: `yyyymmddHHMMSSFFF`, де `yyyy` - рік, `mm` - місяць, `dd` - день місяця, `HH` - годин, `MM` - хвилин, `SS` - секунд, `FFF` - мікросекунд&quot;
 &gt;&gt;
 
 &lt;&lt;edit-logo-field
   tid:&quot;$:/boa/logo&quot; 
   lbl:&quot;Дата модифікації вікі&quot; 
   fld:&quot;wiki-modified&quot; 
-  descr:&quot;&quot;
+  descr:&quot;Формат аналогічний до //Дата створення вікі//&quot;
 &gt;&gt;
 </pre>
 </div>
-<div created="20170104195303693" modified="20190817074104347" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20170104195303693" modified="20190818095909977" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define res_link(link, tooltip, image)
 &lt;a href=&quot;$link$&quot; title=&quot;$tooltip$&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$image$]]&lt;/div&gt;&lt;/a&gt;
 \end
 
-\define feedback-link(wiki-address, wiki-name, feedback-icon)
-&lt;a href=&quot;$wiki-address$/issues&quot; title=&quot;Feedback on the '$wiki-name$' project via Github&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$feedback-icon$]]&lt;/div&gt;&lt;/a&gt;
+\define feedback-link(wiki-github, wiki-name, feedback-icon)
+&lt;a href=&quot;$wiki-github$/issues/new&quot; title=&quot;Feedback on the '$wiki-name$' project via Github&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$feedback-icon$]]&lt;/div&gt;&lt;/a&gt;
 \end
 
 &lt;div style=&quot;clear:both;&quot;/&gt;
@@ -444,7 +451,7 @@ Error message and password prompt
     &quot;$:/boa/img/protw-logo.svg&quot;
 &gt;&gt;
 &lt;$macrocall $name=&quot;feedback-link&quot; 
-    wiki-address={{$:/boa/logo!!wiki-address}} 
+    wiki-github={{$:/boa/logo!!wiki-github}} 
     wiki-name={{$:/boa/logo!!wiki-name}}
     feedback-icon=&quot;$:/boa/img/github-logo.svg&quot;
 /&gt;
