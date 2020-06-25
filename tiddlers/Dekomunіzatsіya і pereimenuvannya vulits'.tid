@@ -1,0 +1,10 @@
+created: 20200625191946250
+modified: 20200625192606406
+tags: 
+title: Декомунізація і перейменування вулиць
+
+Перелік вулиць, які підлягають перейменуванню в рамках закону «Про засудження комуністичного та націонал-соціалістичного (нацистського) тоталітарного режимів та заборону пропаганди їхньої символіки» можна переглянути на [[мапі|http://pavlo-dudka.github.io/osm-pg-tests/test.html?map?decommunization.streets]] або у вигляді [[списку|http://pavlo-dudka.github.io/osm-pg-tests/test.html?table?decommunization.streets]]. Джерелом даних про нові назви вулиць може слугувати “Адресний реєстр”, який можна відкрити в [[Гугл-таблицях|https://docs.google.com/spreadsheets/d/1BN0w-F43kHL2gZFYkzWEEuXdqC_cq_cy-GvdOnsLECA]] або скачати [[файл Excel|https://drive.google.com/open?id=1kzFhXqV7ODfY-P8z0_mKca1xEQarIbMq]]. Нові назви вулиць містяться в стовпці Geon_Name. Для зміни назви вулиці в редакторі ID (редактор openstreetmap у браузері) або JOSM, до старої назви вулиці дописуємо префікс old_ (приклад: old_name=Карла Маркса вулиця). Нову назву вулиці, відповідно, позначаємо тегом name. Зверніть увагу на район, якому належить населений пункт, вулиці якого ви редагуєте, тому що в межах однієї області однакова назва населеного пункту може зустрічатись декілька раз.
+
+!! Джерело
+
+* Декомунізація/перейменування вулиць. Опубліковано [[andergrin|https://www.openstreetmap.org/user/andergrin]]  10.4.2020 (https://www.openstreetmap.org/user/andergrin/diary/392676)
